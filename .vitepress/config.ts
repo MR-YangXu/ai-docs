@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 // 子路径部署时设置 DOCS_BASE=/ai-doc/，值应以前后斜杠包围。
 const base = process.env.DOCS_BASE || '/'
 const repository = process.env.DOCS_REPOSITORY_URL?.replace(/\/$/, '')
+const aiCodeRepository = 'https://github.com/MR-YangXu/AI-Coding'
 const references = [
   { text: 'AI Developer Guide', link: 'https://github.com/dwmkerr/ai-developer-guide' },
   { text: 'Awesome Cursor Rules', link: 'https://github.com/tugkanboz/awesome-cursorrules' },
@@ -14,7 +15,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'AI 编程范式',
   titleTemplate: ':title · AI 编程范式',
-  description: '让 AI 编程从盲目生成走向可验证交付：规划、执行、复核，以及可复用的团队规则。',
+  description: '在现有项目中使用 Node.js 22，六步接入 AI Code，再按项目规则从截图生成页面。',
   base,
   srcDir: 'docs',
   cleanUrls: true,
@@ -38,34 +39,56 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'AI 编程范式',
     nav: [
-      { text: '开始使用', link: '/getting-started', activeMatch: '^/getting-started' },
+      { text: '动手教程', link: '/getting-started', activeMatch: '^/(getting-started|tutorial/|examples/)' },
+      { text: '流程指南', link: '/guide/workflow', activeMatch: '^/guide/' },
       { text: '规则与配置', link: '/rules/agents-template', activeMatch: '^/rules/' },
       { text: '项目操作手册', link: '/handbook', activeMatch: '^/handbook' },
       { text: '参考资源', items: references },
     ],
-    // 核心内容先集中在两篇文档，使用显式锚点提供分组导航。
-    // 拆成独立页面时，只需将对应 link 替换为新路由。
+    // 动手教程按步骤推进；流程、规则和场景实践作为随时可查的参考。
     sidebar: [
       {
         text: '开始使用',
         collapsed: false,
         items: [
-          { text: '快速上手', link: '/getting-started' },
-          { text: '核心理念', link: '/getting-started#concepts' },
+          { text: '教程概览', link: '/getting-started#what-you-build' },
+          { text: '核心理念', link: '/guide/workflow#concepts' },
+        ],
+      },
+      {
+        text: '动手教程 · 六步接入与实践',
+        collapsed: false,
+        items: [
+          { text: '01 · 进入项目，检查 Node.js', link: '/getting-started' },
+          { text: '02 · 安装 AI Code', link: '/tutorial/install-ai-code' },
+          { text: '03 · 运行初始化', link: '/tutorial/initialize' },
+          { text: '04 · 查看状态', link: '/tutorial/check-status' },
+          { text: '05 · 完善项目档案', link: '/tutorial/project-rules' },
+          { text: '06 · 根据图片生成页面', link: '/tutorial/first-page' },
+        ],
+      },
+      {
+        text: '扩展练习 · 用户列表',
+        collapsed: true,
+        items: [
+          { text: '基础回显', link: '/examples/query-first-step' },
+          { text: '状态与重置', link: '/tutorial/query-summary' },
+          { text: '验证并修复', link: '/tutorial/test-and-fix' },
+          { text: '审查与交付', link: '/tutorial/review-and-deliver' },
         ],
       },
       {
         text: '范式与流程',
-        collapsed: false,
+        collapsed: true,
         items: [
-          { text: '需求拆解 · Plan', link: '/getting-started#plan' },
-          { text: '代码生成 · Implement', link: '/getting-started#implement' },
-          { text: '代码审查 · Review', link: '/getting-started#review' },
+          { text: '需求拆解 · Plan', link: '/guide/workflow#plan' },
+          { text: '代码生成 · Implement', link: '/guide/workflow#implement' },
+          { text: '代码审查 · Review', link: '/guide/workflow#review' },
         ],
       },
       {
         text: '规则与配置',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'AGENTS.md 模板', link: '/rules/agents-template#agents-md' },
           { text: '.cursorrules 兼容模板', link: '/rules/agents-template#cursorrules' },
@@ -75,11 +98,11 @@ export default defineConfig({
       },
       {
         text: '最佳实践',
-        collapsed: false,
+        collapsed: true,
         items: [
-          { text: '前端场景', link: '/getting-started#frontend' },
-          { text: '后端场景', link: '/getting-started#backend' },
-          { text: '测试场景', link: '/getting-started#testing' },
+          { text: '前端场景', link: '/guide/workflow#frontend' },
+          { text: '后端场景', link: '/guide/workflow#backend' },
+          { text: '测试场景', link: '/guide/workflow#testing' },
         ],
       },
       {
@@ -126,9 +149,8 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        // 未提供本项目仓库地址时，明确链接到已核实的参考项目。
-        link: repository || references[0].link,
-        ariaLabel: repository ? '本项目 GitHub 仓库' : '参考项目：AI Developer Guide',
+        link: repository || aiCodeRepository,
+        ariaLabel: repository ? '文档 GitHub 仓库' : 'AI Code 源码仓库',
       },
     ],
     docFooter: { prev: '上一篇', next: '下一篇' },
