@@ -2,7 +2,7 @@
 layout: home
 title: 首页
 titleTemplate: AI 编程范式 · 从真实项目开始
-description: 在现有项目中使用 Node.js 22，安装并初始化 AI Code，完善档案后按截图生成页面。
+description: 在现有项目中使用 Node.js 18 及以上，安装并初始化 AI Code，完善档案后按截图生成页面。
 hero:
   name: AI 编程范式
   text: 在真实项目里，边做边学。
@@ -16,7 +16,7 @@ hero:
       link: /handbook
 features:
   - title: 01 · 进入现有项目
-    details: 打开业务项目根目录，检查并切换到 Node.js 22。
+    details: 打开业务项目根目录，确认使用 Node.js 18 及以上，满足项目环境要求。
     link: /getting-started
     linkText: 准备项目环境
   - title: 02 · 安装 AI Code

@@ -1,10 +1,10 @@
 # AI 编程范式
 
-基于 VitePress 的团队操作手册。主线为：进入现有项目并检查 Node.js 22 → 安装 AI Code → 初始化 → 查看状态 → 补全并人工审查 profile → 根据截图生成页面。命令按本地 AI Code **0.3.0** 源码核对，日期为 **2026-10-08**。
+基于 VitePress 的团队操作手册。主线为：进入现有项目并检查 Node.js 18 及以上 → 安装 AI Code → 初始化 → 查看状态 → 补全并人工审查 profile → 根据截图生成页面。命令按本地 AI Code **0.3.0** 源码核对，日期为 **2026-10-08**。
 
 ## 本地运行
 
-使用 Node.js 22，在本仓库根目录执行：
+使用 Node.js 18 及以上，在本仓库根目录执行：
 
 ```bash
 npm ci
@@ -27,7 +27,7 @@ npm run docs:preview
 - [AI Code 操作手册](docs/handbook.md)：初始化、profile、版本同步和质量命令。
 - [规则模板](docs/rules/agents-template.md)：AGENTS.md、MDC、旧格式兼容与 MCP。
 
-参考图位于 `docs/public/images/order-management-reference.png`，用于页面练习；生成演示数据时使用虚构信息。原用户列表增量教程保留为[扩展练习](docs/examples/query-first-step.md)，其入口和组件契约基于 `front-aggregate/.ai-code/profile.md`，不复制业务工程或接口实现。
+参考图位于 `docs/public/images/order-management-reference.png`，用于页面练习；生成演示数据时使用虚构信息。[继续练习](docs/examples/query-first-step.md)沿用刚生成的订单页面，练习复制订单号、快捷筛选、修复问题和检查结果。每篇提供短提示词与可操作的验收步骤。
 
 ## 部署
 

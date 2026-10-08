@@ -107,6 +107,11 @@
   font-size: 17px;
 }
 
+.prompt-page .vp-doc .language-text pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 .vp-doc .workflow-steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

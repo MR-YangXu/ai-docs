@@ -64,7 +64,7 @@ AI 编程范式把一次改动组织为 **Plan（规划）→ Implement（执行
 - 复用已有 loading、失败、空结果和过期响应处理；动态选项写入当前页实例。
 - 目录、路由、组件和国际化能力以当前源码及已审查的 profile 为准。
 
-从[六步动手教程](/getting-started)完成接入并按截图生成页面。希望练习小范围修改时，可继续看[用户列表扩展练习](/examples/query-first-step)。
+从[六步动手教程](/getting-started)完成接入并按截图生成页面。接着在同一个页面上[练习复制订单号](/examples/query-first-step)、快捷筛选、修复问题和检查结果。
 
 ## 后端场景 {#backend}
 
@@ -78,10 +78,14 @@ AI Code 当前聚焦 Vue 项目，不提供后端专项技能。后端可以沿�
 
 ## 来源与适用范围 {#references}
 
-本手册的命令以 2026-10-08 读取的 AI Code 0.3.0 源码为准；用户列表扩展练习另参考 `front-aggregate` 档案。外部项目用于参考组织方式：
+本手册的命令以 2026-10-08 读取的 AI Code 0.3.0 源码为准。教程与练习按“具体任务 → 短提示词 → 操作结果”组织，参考以下资料的写法，订单页面示例为本站编写：
 
 | 来源 | 采用的部分 |
 | --- | --- |
+| [VS Code 官方最佳实践](https://code.visualstudio.com/docs/agents/best-practices) | 提示词写清任务、必要约束和预期结果，再用短追问调整 |
+| [VS Code：给现有项目增加功能](https://code.visualstudio.com/docs/agents/guides/add-a-feature) | 将需求对应到具体操作和可观察的验收结果 |
+| [Diátaxis 教程写作指南](https://diataxis.fr/tutorials/) | 每一步都有可见结果，原理说明不打断动手过程 |
+| [鱼皮 AI 教程：快速上手](https://github.com/liyupi/ai-guide/blob/main/Vibe%20Coding%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/01%20%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%20Vibe%20Coding.md) | 借鉴多轮对话顺序：生成初版、调整细节、添加功能、操作验证 |
 | [Vue 快速上手](https://cn.vuejs.org/guide/quick-start.html) | 先运行、再修改、再深入；每步有可见结果 |
 | [AI Developer Guide](https://github.com/dwmkerr/ai-developer-guide/tree/e6b7b4ef5f70b96743c253327b86a750907b9bc8) | Plan / Implement / Review 闭环 |
 | [Awesome Cursor Rules](https://github.com/tugkanboz/awesome-cursorrules/tree/c2216ad56ceaef6a1455cbe85627c339d5148b42) | 区分 MDC、AGENTS.md 与旧规则迁移 |

@@ -13,7 +13,7 @@ next:
 
 # 安装 AI Code 依赖
 
-确认当前终端已经使用 Node.js 22，在业务项目根目录执行：
+确认当前终端使用 Node.js 18 及以上，且满足业务项目的版本要求，在项目根目录执行：
 
 ```bash
 npm i @agent-xy/ai-code

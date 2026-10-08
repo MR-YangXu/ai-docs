@@ -11,7 +11,7 @@ description: AI Code 0.3.0 的初始化、项目档案、版本同步与质量�
 
 ## 首次接入 {#init}
 
-在**现有业务项目根目录**运行，本教程统一使用 **Node.js 22**。下面以 npm 为例，先安装依赖，再初始化并查看状态：
+在**现有业务项目根目录**运行，要求 **Node.js 18 及以上**；业务项目要求更高版本时，以项目要求为准。下面以 npm 为例，先安装依赖，再初始化并查看状态：
 
 ```bash
 node -v
@@ -20,7 +20,7 @@ npx @agent-xy/ai-code init
 npx ai-code status
 ```
 
-`node -v` 应输出 `v22.x.x`，否则先切换版本。项目有其他包管理器约定时沿用原工具和锁文件。
+先确认 `node -v` 输出的版本满足要求，已满足时直接继续。项目有其他包管理器约定时沿用原工具和锁文件。
 
 交互式初始化按提示选择场景与是否生成档案。首次接入需要显式指定参数时，可使用：
 
@@ -88,10 +88,6 @@ npx ai-code check
 | `observe`（观察，默认） | 展示 missing，不单独阻断 | 阻断 |
 | `enforce`（阻断） | lint、typecheck、build 缺失即阻断；test 不统一强制 | 阻断 |
 
-### 用户列表扩展练习的历史状态
-
-2026-10-08 核对 `front-aggregate` 时：安装包 `0.3.0`，生成规则 `0.1.0`，版本不一致使 `status` 返回退出码 `1`。lint、build 已映射；独立 typecheck、test 未配置；constants 未配置。这只用于说明如何理解输出，当前项目状态以你实际运行的结果为准，不代表已经执行或通过业务检查。
-
 ### 增加检查脚本后
 
 先在 `package.json` 定义适合本项目的非交互、非修改型命令，再手动更新 `.ai-code/config.json` 的 `scripts` 对应字段，保留其余配置。`sync` 不重新发现脚本，重复 `init` 也不重建映射。
@@ -134,7 +130,7 @@ npx ai-code status
 
 配置示例在安装包 `content/templates/constants/config.json`。按项目实际定义和引用范围合并 `constants` 字段，保留现有配置；`init` 与 `sync` 不会自动开启业务扫描。
 
-`front-aggregate` 的用户枚举在 `src/views/users/index/config/data.ts`，不要照示例新建重复的 `src/constants`。
+先核实当前项目已有的枚举和字典入口，再填写配置，避免照模板创建重复定义。
 
 - 未配置：`not_configured`；不算通过。
 - 配置有效时 `status` 仅报告可用，`check` 才扫描。

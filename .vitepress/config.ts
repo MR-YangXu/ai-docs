@@ -9,13 +9,14 @@ const references = [
   { text: 'AI Developer Guide', link: 'https://github.com/dwmkerr/ai-developer-guide' },
   { text: 'Awesome Cursor Rules', link: 'https://github.com/tugkanboz/awesome-cursorrules' },
   { text: 'AI Code Guide', link: 'https://github.com/automata/aicodeguide' },
+  { text: '教程写法与参考样例', link: '/guide/workflow#references' },
 ]
 
 export default defineConfig({
   lang: 'zh-CN',
   title: 'AI 编程范式',
   titleTemplate: ':title · AI 编程范式',
-  description: '在现有项目中使用 Node.js 22，六步接入 AI Code，再按项目规则从截图生成页面。',
+  description: '在现有项目中使用 Node.js 18 及以上，六步接入 AI Code，再按项目规则从截图生成页面。',
   base,
   srcDir: 'docs',
   cleanUrls: true,
@@ -68,13 +69,13 @@ export default defineConfig({
         ],
       },
       {
-        text: '扩展练习 · 用户列表',
+        text: '继续练习 · 订单页面',
         collapsed: true,
         items: [
-          { text: '基础回显', link: '/examples/query-first-step' },
-          { text: '状态与重置', link: '/tutorial/query-summary' },
-          { text: '验证并修复', link: '/tutorial/test-and-fix' },
-          { text: '审查与交付', link: '/tutorial/review-and-deliver' },
+          { text: '复制订单号', link: '/examples/query-first-step' },
+          { text: '一键查看失败订单', link: '/tutorial/query-summary' },
+          { text: '把问题说清楚，让 AI 修复', link: '/tutorial/test-and-fix' },
+          { text: '检查页面，整理交付说明', link: '/tutorial/review-and-deliver' },
         ],
       },
       {
