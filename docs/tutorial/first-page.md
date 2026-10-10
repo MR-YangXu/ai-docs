@@ -6,8 +6,8 @@ prev:
   text: 05 · 完善项目档案
   link: /tutorial/project-rules
 next:
-  text: 复制订单号
-  link: /examples/query-first-step
+  text: 生成对照 · 规则与源码证据
+  link: /examples/order-generation-evidence
 ---
 
 <script setup>
@@ -50,4 +50,4 @@ import { withBase } from 'vitepress'
 
 确认统计卡片使用的金额单位和统计范围；使用模拟数据时，先验收演示效果，真实接口记为待联调。模拟订单和用户信息使用虚构数据。
 
-页面可以运行后，继续[给订单号增加复制按钮](/examples/query-first-step)。如果某个操作不符合预期，参考[如何向 AI 描述问题](/tutorial/test-and-fix)。
+页面可以运行后，先看[生成对照：Profile、Skills 与源码证据](/examples/order-generation-evidence)，学习如何把项目约定与实际代码逐条对上，再继续[给订单号增加复制按钮](/examples/query-first-step)。如果某个操作不符合预期，参考[如何向 AI 描述问题](/tutorial/test-and-fix)。

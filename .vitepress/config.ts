@@ -66,6 +66,7 @@ export default defineConfig({
           { text: '04 · 查看状态', link: '/tutorial/check-status' },
           { text: '05 · 完善项目档案', link: '/tutorial/project-rules' },
           { text: '06 · 根据图片生成页面', link: '/tutorial/first-page' },
+          { text: '生成对照 · 规则与源码证据', link: '/examples/order-generation-evidence' },
         ],
       },
       {

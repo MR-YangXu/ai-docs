@@ -23,6 +23,7 @@ npm run docs:preview
 - [动手教程](docs/getting-started.md)：在现有项目中，六步完成接入与截图生成页面。
 - [档案提示词](docs/tutorial/project-rules.md)：按源码补全 profile，并人工审查。
 - [图片与页面提示词](docs/tutorial/first-page.md)：下载订单管理截图，按项目规则生成页面。
+- [生成对照与源码证据](docs/examples/order-generation-evidence.md)：基于 front-aggregate 的 AI Code 0.5.0 实验，对照 profile、Skills 与真实源码，保留检查结果和未闭合项。
 - [日常协作流程](docs/guide/workflow.md)：规划、执行、复核和场景实践。
 - [AI Code 操作手册](docs/handbook.md)：初始化、profile、版本同步和质量命令。
 - [规则模板](docs/rules/agents-template.md)：AGENTS.md、MDC、旧格式兼容与 MCP。

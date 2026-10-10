@@ -112,6 +112,79 @@
   overflow-wrap: anywhere;
 }
 
+/* 证据页沿用原生折叠区与代码分组，长路径和规则原文允许换行。 */
+.evidence-page .vp-doc .evidence-card {
+  margin: 20px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+}
+
+.evidence-page .vp-doc .evidence-card > summary {
+  cursor: pointer;
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.evidence-page .vp-doc .evidence-card > summary:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.evidence-page .vp-doc .evidence-card .vp-code-group {
+  margin-top: 20px;
+}
+
+.evidence-page .vp-doc .evidence-card > ul {
+  margin: 16px 0;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}
+
+.evidence-page .vp-doc .evidence-card > ul > li {
+  margin-top: 4px;
+  line-height: 1.65;
+}
+
+.evidence-page .vp-doc .language-md pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.evidence-page .vp-doc :not(pre) > code {
+  overflow-wrap: anywhere;
+}
+
+.evidence-page .vp-doc .evidence-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.evidence-page .vp-doc .evidence-status-partial {
+  background: var(--vp-c-warning-soft);
+  color: var(--vp-c-warning-1);
+}
+
+@media (max-width: 639px) {
+  .evidence-page .vp-doc .evidence-card {
+    padding: 12px;
+  }
+
+  .evidence-page .vp-doc .evidence-card div[class*='language-'],
+  .evidence-page .vp-doc .evidence-card .vp-code-group .tabs {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 .vp-doc .workflow-steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
