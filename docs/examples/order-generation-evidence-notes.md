@@ -13,7 +13,7 @@ next: false
 
 # 订单实验：完整源码与检查记录
 
-先看[生成对照：看懂规则如何落地](/examples/order-generation-evidence)，用三个例子了解 Skill、profile 与代码的关系。本页保留 **2026-10-09** 的详细材料，需要核对某条结论时再展开查阅。
+先看[生成对照：看懂规则如何落地](/examples/order-generation-evidence)，先看 admin、api、constant、type 四个 Skill 的规则与代码示例。本页保留 **2026-10-09** 的详细材料，需要核对某条结论时再展开查阅。
 
 [Profile 填写前后](#profile-comparison) · [规则与源码](#code-evidence) · [待闭合项](#gaps) · [检查记录](#verification)
 

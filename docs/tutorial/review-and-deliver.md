@@ -43,6 +43,6 @@ next:
 - **已验证：** 实际操作过的场景，以及运行过的检查和结果。
 - **待联调：** 尚未接入的接口、未运行的检查或仍未解决的问题。
 
-还可以附上规则与代码的对照：先看[三个讲解例子](/examples/order-generation-evidence)，再参考[完整证据与检查记录](/examples/order-generation-evidence-notes)的写法。没有生成对话或读取记录时，只说明代码符合哪些规则，不宣称已证明生成时加载过哪些 Skill。
+还可以附上规则与代码的对照：先看[四个 Skill 的规则与代码示例](/examples/order-generation-evidence)，再参考[完整证据与检查记录](/examples/order-generation-evidence-notes)的写法。没有生成对话或读取记录时，只说明代码符合哪些规则，不宣称已证明生成时加载过哪些 Skill。
 
 下一次需求也可以这样推进：描述一个具体改动，让 AI 实现，再亲手核对结果。更多写法见[日常协作流程](/guide/workflow)。

@@ -50,4 +50,4 @@ import { withBase } from 'vitepress'
 
 确认统计卡片使用的金额单位和统计范围；使用模拟数据时，先验收演示效果，真实接口记为待联调。模拟订单和用户信息使用虚构数据。
 
-页面可以运行后，先看[生成对照：看懂规则如何落地](/examples/order-generation-evidence)，用搜索组件、页面目录和查询分页三个例子理解规则与代码的关系，再继续[给订单号增加复制按钮](/examples/query-first-step)。如果某个操作不符合预期，参考[如何向 AI 描述问题](/tutorial/test-and-fix)。
+页面可以运行后，先看[生成对照：看懂规则如何落地](/examples/order-generation-evidence)，对照 admin、api、constant、type 四个 Skill 的规则原文和实际代码，再继续[给订单号增加复制按钮](/examples/query-first-step)。如果某个操作不符合预期，参考[如何向 AI 描述问题](/tutorial/test-and-fix)。
