@@ -28,7 +28,7 @@ next:
 
 本教程使用 Cursor 和现有 Vue 3 + Vite + TypeScript 项目。AI Code 当前生成 Cursor 规则与技能；页面使用业务项目已有的技术栈和组件。
 
-完成第 6 步后，可以查看[生成对照：Profile、Skills 与源码证据](/examples/order-generation-evidence)，用真实订单页核对规则如何落实，以及哪些事项还需验证。
+完成第 6 步后，可以查看[生成对照：看懂规则如何落地](/examples/order-generation-evidence)，用真实订单页的三个例子，理解 Skill 提要求、profile 指定项目用法、代码如何对应。
 
 ## 1. 打开项目根目录
 

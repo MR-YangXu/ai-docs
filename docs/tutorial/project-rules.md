@@ -63,4 +63,4 @@ git diff --cached -- .ai-code/profile.md
 
 **完成标志：** 选择生成的 profile 已补全并经过人工审查，与下一步页面有关的待确认项已处理。接着把[参考图和页面提示词](/tutorial/first-page)一起交给 AI。
 
-想看填写后的档案如何对应生成代码，可参考[真实实验的 Profile 填写前后对照](/examples/order-generation-evidence#profile-comparison)。其中同时保留了仍待确认的约定，便于区分“已经填写”与“已经审查完成”。
+想看填写档案有什么用，可参考[订单实验：profile 明确了什么，代码生成了什么](/examples/order-generation-evidence#profile-comparison)。需要查证时，再展开其中链接的档案原文。

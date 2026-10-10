@@ -3,7 +3,7 @@ title: 复制订单号
 description: 在刚生成的订单页面增加复制按钮，用一次点击和粘贴验证结果。
 pageClass: prompt-page
 prev:
-  text: 生成对照 · 规则与源码证据
+  text: 生成对照 · 看懂规则如何落地
   link: /examples/order-generation-evidence
 next:
   text: 一键查看失败订单
