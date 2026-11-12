@@ -112,6 +112,43 @@
   overflow-wrap: anywhere;
 }
 
+/* 总览图保留可读字号，窄屏在图内滚动，并提供原图入口。 */
+.design-flow-page .content-container {
+  max-width: 1160px !important;
+}
+
+.design-flow-page .design-flow-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 20px 0 14px;
+}
+
+.design-flow-page .design-flow-canvas {
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+}
+
+.design-flow-page .design-flow-canvas:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.design-flow-page .design-flow-canvas img {
+  display: block;
+  width: 100%;
+  min-width: 1000px;
+  max-width: none;
+  height: auto;
+}
+
+.design-flow-page .design-flow-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+}
+
 /* 证据页沿用原生折叠区与代码分组，长路径和规则原文允许换行。 */
 .evidence-page .vp-doc .evidence-card {
   margin: 20px 0;

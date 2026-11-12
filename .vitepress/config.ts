@@ -83,6 +83,7 @@ export default defineConfig({
         text: '范式与流程',
         collapsed: true,
         items: [
+          { text: 'AI Code 设计流程图', link: '/guide/design-flow' },
           { text: '需求拆解 · Plan', link: '/guide/workflow#plan' },
           { text: '代码生成 · Implement', link: '/guide/workflow#implement' },
           { text: '代码审查 · Review', link: '/guide/workflow#review' },

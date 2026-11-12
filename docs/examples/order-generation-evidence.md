@@ -36,6 +36,8 @@ next:
 
 **Skill 提要求，profile 指定项目用法，最后到代码里核对。**
 
+想先看全貌，可以打开 [AI Code 设计流程图](/guide/design-flow)，再用下面四个例子核对其中的“规则 → 代码”关系。
+
 ## 例子一：ai-code-admin · 搜索框用了哪个组件？ {#components}
 
 ### 先看规则要求
