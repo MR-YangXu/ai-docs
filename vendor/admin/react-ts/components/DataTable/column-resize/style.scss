@@ -1,0 +1,70 @@
+.resizable-antd-table {
+  .resizable-antd-table-column {
+    position: relative;
+    overflow: visible;
+  }
+
+  .resizable-antd-table-column__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .resizable-antd-table-column__title-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .resizable-antd-table-column__grip,
+  .resizable-antd-table-column__action {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    padding: 2px;
+    border-radius: 4px;
+    color: var(--ant-color-text-tertiary, rgb(0 0 0 / 45%));
+    opacity: 0;
+    touch-action: none;
+    user-select: none;
+    transition:
+      opacity 0.15s ease,
+      color 0.15s ease,
+      background-color 0.15s ease;
+  }
+
+  .resizable-antd-table-column__grip {
+    cursor: col-resize;
+  }
+
+  .resizable-antd-table-column__action {
+    cursor: pointer;
+  }
+
+  .resizable-antd-table-column:hover .resizable-antd-table-column__grip,
+  .resizable-antd-table-column:hover .resizable-antd-table-column__action,
+  body.resizable-antd-table-column-resizing
+    &
+    .resizable-antd-table-column__grip {
+    opacity: 1;
+  }
+
+  .resizable-antd-table-column__grip:hover,
+  .resizable-antd-table-column__action:hover,
+  body.resizable-antd-table-column-resizing
+    &
+    .resizable-antd-table-column__grip {
+    color: #1677ff;
+    background-color: rgb(22 119 255 / 10%);
+  }
+}
+
+body.resizable-antd-table-column-resizing {
+  cursor: col-resize;
+  user-select: none;
+}

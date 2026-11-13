@@ -1,0 +1,155 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  color: #273449;
+  background: #fff;
+  font-size: 14px;
+  color-scheme: light;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 24px;
+}
+#app {
+  min-width: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #1677ff;
+  outline-offset: 3px;
+}
+.demo-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+}
+.demo-actions > button,
+.demo-button {
+  border: 1px solid #d9e0ea;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #1668dc;
+}
+.demo-actions label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.demo-actions input:not([type="checkbox"]),
+.demo-input {
+  border: 1px solid #d9e0ea;
+  padding: 7px 10px;
+  border-radius: 6px;
+  max-width: 100%;
+}
+.demo-output {
+  margin: 16px 0 0;
+  background: #f6f8fa;
+  border: 1px solid #e9edf2;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.65;
+  overflow: auto;
+  max-height: 200px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.demo-note {
+  font-size: 13px;
+  color: #66758c;
+  line-height: 1.7;
+}
+.demo-status {
+  margin: 12px 0;
+  color: #526078;
+}
+.demo-error,
+[role="alert"] {
+  color: #cf1322;
+}
+.demo-empty {
+  padding: 24px;
+  text-align: center;
+  color: #66758c;
+}
+.demo-surface {
+  background: #f5f7fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+.demo-surface .base-card {
+  padding-bottom: 12px;
+}
+.demo-list {
+  padding: 0;
+  list-style: none;
+}
+.demo-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+.demo-metrics {
+  display: flex;
+  gap: 36px;
+}
+.demo-metrics strong {
+  display: block;
+  font-size: 24px;
+  color: #1677ff;
+}
+.demo-metrics span {
+  font-size: 12px;
+  color: #66758c;
+}
+.demo-form {
+  display: grid;
+  gap: 16px;
+}
+.demo-form label {
+  display: grid;
+  gap: 8px;
+}
+.el-dialog {
+  max-width: calc(100vw - 32px);
+}
+.el-drawer {
+  max-width: 100vw;
+}
+.ant-modal {
+  max-width: calc(100vw - 32px);
+}
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  .demo-actions {
+    gap: 8px;
+  }
+  .demo-metrics {
+    gap: 18px;
+  }
+  .demo-output {
+    padding: 10px;
+  }
+  .ai-code-search-form__fields {
+    max-width: 100%;
+  }
+}

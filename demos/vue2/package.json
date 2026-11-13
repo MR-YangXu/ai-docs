@@ -1,0 +1,12 @@
+{
+  "name": "@ai-doc/demo-vue2",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "vue": "2.7.16",
+    "element-ui": "2.15.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "2.3.3"
+  }
+}

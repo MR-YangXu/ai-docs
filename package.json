@@ -4,15 +4,34 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
+  "workspaces": [
+    "demos/vue2",
+    "demos/vue3",
+    "demos/react"
+  ],
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": "node scripts/docs.mjs dev",
+    "docs:build": "node scripts/docs.mjs build",
+    "docs:preview": "node scripts/docs.mjs preview",
+    "components:sync": "node scripts/sync-components.mjs",
+    "components:check": "node scripts/check-components.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "node --test test/*.test.mjs"
   },
   "devDependencies": {
     "vitepress": "1.6.4",
-    "vue": "3.5.43"
+    "vue": "3.5.43",
+    "vite": "5.4.21",
+    "@vitejs/plugin-vue": "5.2.4",
+    "typescript": "5.9.3",
+    "vue-tsc": "2.2.12",
+    "sass": "1.93.2",
+    "@types/node": "20.17.24",
+    "shiki": "2.5.0"
+  },
+  "overrides": {
+    "scroll-into-view-if-needed": "3.1.0"
   }
 }

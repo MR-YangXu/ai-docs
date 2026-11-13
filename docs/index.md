@@ -14,6 +14,9 @@ hero:
     - theme: alt
       text: AI Code 接入手册
       link: /handbook
+    - theme: alt
+      text: 组件中心 · Vue / React
+      link: /components/
 features:
   - title: 01 · 进入现有项目
     details: 打开业务项目根目录，确认使用 Node.js 18 及以上，满足项目环境要求。

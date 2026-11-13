@@ -4,9 +4,10 @@
 
 ## 本地运行
 
-使用 Node.js 18 及以上，在本仓库根目录执行：
+文档站及三栈示例使用 Node.js 20，在本仓库根目录执行：
 
 ```bash
+nvm use
 npm ci
 npm run docs:dev
 ```
@@ -17,6 +18,15 @@ npm run docs:preview
 ```
 
 根配置 `.vitepress/config.ts` 通过 `srcDir: 'docs'` 加载正文，构建输出为 `.vitepress/dist/`。
+
+## 组件中心
+
+新增 Vue 2、Vue 3、React 三个分区，含 35 项能力文档、77 个可运行示例与源码面板。日常安装和构建只依赖本仓库，来源仓库无需存在。
+
+- [组件中心](docs/components/index.md)
+- [源码同步与新增文档](docs/components/maintenance.md)
+- 快照来源：`fc9cc41`，包声明 `0.7.0`；安装命令以实际发布包内容为准。
+- `npm run components:check` 检查快照和覆盖，`npm test` 检查异步契约。
 
 ## 内容入口
 

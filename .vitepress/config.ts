@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { sidebarFor } from '../catalog/components.mjs'
 
 // 从仓库根目录运行 vitepress；Markdown 内容位于 docs/。
 // 子路径部署时设置 DOCS_BASE=/ai-doc/，值应以前后斜杠包围。
@@ -26,6 +27,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#1677ff' }],
   ],
+  vite: { server: { proxy: Object.fromEntries(['vue2','vue3','react'].filter(stack => process.env[`DOCS_DEMO_${stack.toUpperCase()}_URL`]).map(stack => [`${base}demos/${stack}/`, { target: process.env[`DOCS_DEMO_${stack.toUpperCase()}_URL`], changeOrigin: true, ws: true }])) } },
   markdown: {
     lineNumbers: true,
     theme: { light: 'github-light', dark: 'github-dark' },
@@ -40,6 +42,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'AI 编程范式',
     nav: [
+      { text: '组件中心', link: '/components/', activeMatch: '^/components/' },
       { text: '动手教程', link: '/getting-started', activeMatch: '^/(getting-started|tutorial/|examples/)' },
       { text: '流程指南', link: '/guide/workflow', activeMatch: '^/guide/' },
       { text: '规则与配置', link: '/rules/agents-template', activeMatch: '^/rules/' },
@@ -47,7 +50,12 @@ export default defineConfig({
       { text: '参考资源', items: references },
     ],
     // 动手教程按步骤推进；流程、规则和场景实践作为随时可查的参考。
-    sidebar: [
+    sidebar: {
+      '/components/vue2/': sidebarFor('vue2'),
+      '/components/vue3/': sidebarFor('vue3'),
+      '/components/react/': sidebarFor('react'),
+      '/components/': [{text:'组件中心',items:[{text:'概览',link:'/components/'},{text:'Vue 2 · JavaScript',link:'/components/vue2/'},{text:'Vue 3 · TypeScript',link:'/components/vue3/'},{text:'React · TypeScript',link:'/components/react/'}]}],
+      '/': [
       {
         text: '开始使用',
         collapsed: false,
@@ -114,6 +122,7 @@ export default defineConfig({
         items: [{ text: 'AI Code 项目操作手册', link: '/handbook' }],
       },
     ],
+    },
     outline: { level: [2, 3], label: '本页目录' },
     search: {
       provider: 'local',

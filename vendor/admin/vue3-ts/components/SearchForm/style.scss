@@ -1,0 +1,29 @@
+.ai-code-search-form {
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    align-items: flex-start;
+  }
+  .el-form-item {
+    margin: 0;
+  }
+  &__control {
+    max-width: 100%;
+    .el-select,
+    .el-input-number,
+    .el-date-editor {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  &__range,
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  // &__actions {
+  //   margin-left: auto;
+  // }
+}

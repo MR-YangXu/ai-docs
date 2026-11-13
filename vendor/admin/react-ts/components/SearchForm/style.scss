@@ -1,0 +1,88 @@
+.ai-code-search-form {
+  min-width: 0;
+
+  &__prefix {
+    margin-bottom: 16px;
+  }
+
+  &__field {
+    min-width: 0;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 0 20px;
+
+    .ant-picker,
+    .ant-input-number,
+    .ant-select {
+      width: 100%;
+    }
+
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    > .ant-input-number {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 100%;
+
+    > .ant-space {
+      max-width: 100%;
+    }
+  }
+
+  &__error {
+    margin-top: 12px;
+  }
+
+  &--compact {
+    .ai-code-search-form__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px 16px;
+    }
+
+    .ai-code-search-form__prefix {
+      margin-bottom: 0;
+    }
+
+    .ai-code-search-form__fields {
+      display: contents;
+
+      .ant-form-item {
+        margin: 0;
+      }
+    }
+
+    .ai-code-search-form__field {
+      width: 240px;
+      max-width: 100%;
+    }
+
+    .ai-code-search-form__actions {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .ai-code-search-form__field {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

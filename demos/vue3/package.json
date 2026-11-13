@@ -1,0 +1,1 @@
+{"name":"@ai-doc/demo-vue3","private":true,"type":"module","scripts":{"typecheck":"vue-tsc --noEmit"},"dependencies":{"vue":"3.5.43","element-plus":"2.11.5","async-validator":"4.2.5"}}
